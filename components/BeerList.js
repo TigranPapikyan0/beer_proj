@@ -3,7 +3,6 @@ import Image from "next/image";
 import Router from 'next/router';
 
 export const BeerList = ({ data }) => {
-
     const sendProps = (beer) => {
         Router.push({
             pathname: '../beerInfo',
@@ -40,6 +39,5 @@ export const BeerList = ({ data }) => {
                 </table>
             </div>
         </>
-
     )
 }

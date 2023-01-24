@@ -3,14 +3,8 @@ import { BeerList } from "../../components/BeerList";
 import { Pagination } from "../../components/Pagination";
 import { FilterData } from "../../components/Filter";
 
-// export async function getServerSideProps() {
-//   const res = await fetch(`https://api.punkapi.com/v2/beers`)
-//   const data = await res.json();
-//   return { props: { beerListData: data } }
-// }
-
 const Home = () => {
-  const [pageCount, setpageCount ]= useState();
+  const [pageCount, setpageCount] = useState();
   const [currentPage, setCurrentPage] = useState(1);
   const [beerListPart, setBeerListPart] = useState([]);
   const [partData, setPartData] = useState([]);
@@ -18,7 +12,7 @@ const Home = () => {
 
   useEffect(() => {
     setPage(1);
-    setpageCount(Math.ceil(partData.length / 10))
+    setpageCount(Math.ceil(partData.length / 10));
   }, [partData]);
 
   useEffect(() => {

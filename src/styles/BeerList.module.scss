@@ -25,7 +25,6 @@
     tr:hover {
         background-color: rgb(108, 180, 124);
         color: #f2f2f2;
-        font-family: cursive;
         cursor: pointer;
     }
 
@@ -34,6 +33,10 @@
         border: 1px solid #ddd;
         padding: 8px;
         width: 20%;
+    }
+
+    td:hover {
+        font-family: cursive;
     }
 
     th {

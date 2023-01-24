@@ -11,11 +11,18 @@ export const FilterData = ({ searchByName }) => {
         searchByName(name);
     }
 
+    const changeInputValue = (e) => {
+        setName(e.target.value);
+        if(!e.target.value) {
+            searchByName('');
+        }
+    }
+
 
     return (
         <div className={styles.filter_block}>
             <form className="filter_block__form" onSubmit={search}>
-                <input type="text" value={name} onChange={(e) => setName(e.target.value)} name="name" placeholder="Search by name" />
+                <input type="search" value={name} onChange={changeInputValue} name="name" placeholder="Search by name" />
             </form>
         </div>
     )
