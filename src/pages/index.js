@@ -18,9 +18,7 @@ const Home = () => {
   useEffect(() => {
     fetch(`https://api.punkapi.com/v2/beers` + (name ? `?beer_name=${name}` : '')).then((res) => {
       res.json().then(newData => {
-        setPartData(prevData => {
-          return newData;
-        });
+        setPartData(newData);
 
       }).catch((e) => console.error(e));
     })
